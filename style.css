@@ -1,0 +1,937 @@
+body{
+  background-color:  white;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* Navbar styles */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 10px 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+
+
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+
+  span{
+    color: red;
+  }
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #000;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: red;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.auth-buttons {
+  display: flex;
+}
+
+.auth-buttons button {
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  background-color: #ff8c00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #ffae42;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* hero section */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url('ramen\ bgg.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: #fff;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay to make text more readable */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* Ensure text is above the overlay */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: red;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .hero-btn {
+    font-size: 1rem;
+  }
+}
+
+/* about us */
+
+.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 50px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.about-us .content {
+  max-width: 50%;
+}
+
+.about-us .content h1 {
+  font-size: 2.6rem;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.about-us .content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-us .btn-learn-more {
+  padding: 10px 25px;
+  font-size: 1rem;
+  color: #fff;
+  background-color:red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.about-us .image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* our service */
+
+.our-service {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 50px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.our-service .image {
+  flex: 1;
+  margin-right: 30px;
+}
+
+.our-service .image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.our-service .content {
+  flex: 1;
+}
+
+.our-service .content h1 {
+  font-size: 2.6rem;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.our-service .content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.our-service .btn-contact-us {
+  padding: 10px 25px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+/* our location */
+
+.our-location {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 50px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.our-location .content {
+  flex: 1;
+  margin-right: 30px;
+}
+
+.our-location .content h1 {
+  font-size: 2.6rem;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.our-location .content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.our-location .btn-visit-us {
+  padding: 10px 25px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.our-location .image {
+  flex: 1;
+}
+
+.our-location .image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* fitur chat admin */
+
+/* Chat Button */
+.chat-admin {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: red;
+  border-radius: 70px;
+}
+
+.chat-admin img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: red;
+}
+
+.chat-admin img:hover {
+  transform: scale(1.1);
+}
+
+/* Chat Box */
+.chat-box {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.chat-box header {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-box .chat-body {
+  padding: 10px;
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+.chat-box form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.chat-box textarea {
+  width: 100%;
+  height: 60px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+}
+
+.chat-box button {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Close Button */
+#close-chat {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* footer section */
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  
+  font-size: 0.8rem;
+  padding-top: 1rem;
+  color: #ccc;
+  background-color: black;
+  height: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-container > div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer ul li {
+    margin-bottom: 5px;
+  }
+}
+
+/* MENU RAMEN */
+
+.judul-menu-ramen{
+  color: black;
+  margin-top: 10rem;
+  margin-inline-start: 4rem;
+  font-size: 24px;
+}
+
+/* section menu ramen */
+
+/* Menu Section */
+.menu-ramen {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.menu-ramen h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Menu Container */
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Menu Item */
+.menu-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  height: 22rem;
+}
+
+.menu-item:hover {
+  transform: translateY(-10px);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #ddd;
+}
+
+.menu-item h3 {
+  font-size: 20px;
+  color: #333;
+  margin: 15px 0;
+}
+
+.menu-item p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 15px 15px;
+}
+
+.menu-item button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* menu appetizer */
+
+.judul-menu-appetizer{
+  color: black;
+  font-size: 24px;
+  margin-top: 1rem;
+  margin-inline-start: 4rem;
+}
+
+/* menu rice burger */
+
+.judul-menu-rice{
+  color: black;
+  font-size: 24px;
+  margin-top: 1rem;
+  margin-inline-start: 4rem;
+}
+
+/* menu rice burger */
+
+.judul-menu-dessert{
+  color: black;
+  font-size: 24px;
+  margin-top: 1rem;
+  margin-inline-start: 4rem;
+}
+
+/* CONTACT US */
+
+main {
+  padding: 2rem;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Form Styling */
+form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input, textarea {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  background: red;
+  color: #fff;
+  border: none;
+  padding: 0.7rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* lokasi adam ramen */
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 250px;
+  height: 20rem;
+  background: red;
+  color: #fff;
+  padding:60px ;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 4rem;
+}
+
+.sidebar h2 {
+  margin-bottom: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar ul li {
+  padding: 12px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+  text-align: left;
+}
+
+.sidebar ul li:hover {
+  background: black;
+}
+
+.map-container {
+  flex-grow: 1;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+iframe {
+  width: 100%;
+  height: 118%;
+  border: none;
+}
+
+/* reservasi */
+
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  height: 100vh;
+  background: url('bg333.webp') no-repeat center center/cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Overlay untuk memperjelas teks */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.btn-reserve {
+  display: inline-block;
+  background: red;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* jam operasional reservasi */
+
+.reservation-times {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 4rem;
+}
+
+.reservation-times h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.time-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 3rem;
+}
+
+.time-btn {
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.time-btn:active {
+  transform: scale(0.95);
+}
+
+/* syarat reservasi */
+
+.judul-syarat{
+  margin-top: 3rem;
+  margin-inline-start: 4rem;
+  max-width: 100%;
+  font-size: 16px;
+
+  .syarat-reservasi{
+    margin-top: 2rem;
+  }
+}
+
+.button-order-reservasi{
+  margin-top: 1rem;
+
+  button{
+    width: 30%;
+    border-radius: 12px;
+  }
+}
+
+.btn-reservasi{
+  margin-top: 3rem;
+  max-width: 100%;
+
+  button{
+    width: 60%;
+    border-radius: 0%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* footer section */
+
+/* Footer Bottom */
+.footer-bottom-2 {
+  text-align: center;
+  
+  font-size: 0.8rem;
+  padding-top: 1rem;
+  color: #ccc;
+  background-color: black;
+  height: 3rem;
+}
+
+.bg-footer{
+  margin-top: 3rem;
+}
+
+/* jam operasional reservasi */
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: red;
+  color: white;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}

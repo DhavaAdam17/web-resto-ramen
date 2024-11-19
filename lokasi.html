@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>LOCATION | ADAM RAMEN</title>
+</head>
+<body>
+   <!-- NAVBAR -->
+
+ <!-- Navbar -->
+ <nav class="navbar">
+  <div class="logo">
+    <a href="home.html">ADAM <span>RAMEN</span></a>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="kontak.html">Contact Us</a></li>
+    <li><a href="promo.html">Promotions</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="lokasi.html">Locations</a></li>
+    <li><a href="service.html">Our Service</a></li>
+    <li class="dropdown">
+      <a href="menu.html" class="dropbtn">Our Menu</a>
+    
+    </li>
+  </ul>
+
+  <div class="auth-buttons">
+  <a href="reservasi.html">  <button class="login-btn">Reservation</button></a>
+   
+  </div>
+
+  <div class="hamburger-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</nav>
+  </div>
+</div>
+
+<!-- lokasi adam ramen -->
+
+<div class="container">
+  <aside class="sidebar">
+      <h2>Locations</h2>
+      <ul>
+          <li onclick="showMap('jakarta')">Jakarta</li>
+          <li onclick="showMap('bandung')">Bandung</li>
+          <li onclick="showMap('surabaya')">Surabaya</li>
+          <li onclick="showMap('bekasi')">Bekasi</li>
+      </ul>
+  </aside>
+  <main class="map-container">
+      <iframe 
+          id="map" 
+          src="" 
+          style="border:0;" 
+          allowfullscreen 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+  </main>
+</div>
+
+<!-- fitur chat admin -->
+
+  <!-- Chat Button -->
+  <div class="chat-admin">
+    <a href="https://wa.me/6281224942513" target="_blank" id="whatsapp-link">
+      <img src="aioa-icon-type-1.svg" alt="Chat Admin">
+    </a>
+  </div>
+
+  <!-- Chat Box -->
+  <div class="chat-box" id="chat-box">
+    <header>
+      <h2>Chat with Admin</h2>
+      <button id="close-chat">&times;</button>
+    </header>
+    <div class="chat-body">
+      <p>Hello! How can we help you today?</p>
+    </div>
+    <form id="chat-form">
+      <textarea id="chat-input" placeholder="Type your message..." required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+
+
+
+<script src="main.js"></script>
+</body>
+</html>
